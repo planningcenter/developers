@@ -1,15 +1,12 @@
 Ministry Centered Technologies
 ==============================
 
-- [Overview](#overview)
+This repository provides documentation and examples for interacting with our applications' APIs.
+
 - [Authentication](#authentication)
 - [Support](#support)
 
 ------------------------------
-
-## Overview
-
-This repository provides documentation and examples for interacting with our applications' APIs.
 
 ## Authentication
 
