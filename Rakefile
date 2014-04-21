@@ -1,7 +1,6 @@
 require_relative 'helpers'
 
 namespace :post do
-
   desc "Create a new post"
   task :new, :title do |t, args|
     title = args[:title]
@@ -36,7 +35,6 @@ namespace :post do
 end
 
 namespace :prefs do
-
   desc "Sets your preferred markdown editor"
   task :editor, :name do |t, args|
       Defaults.prefs["editor"] = args["name"]

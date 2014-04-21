@@ -3,14 +3,16 @@
     <a href="{{ post.url }}">
       {{ post.title }}
     </a>
-    <span class="date">
-      &mdash; {{ post.date | date: "%d %b, %Y" }}
-    </span>
-    {% if post.team %}
-      <span class="team">
-        &mdash; {{ post.team | capitalize }}
+    <span class="meta">
+      <span class="date">
+        &mdash; {{ post.date | date: "%d %b, %Y" }}
       </span>
-    {% endif %}
+      {% if post.team %}
+        <span class="team">
+          &mdash; {{ post.team | capitalize }}
+        </span>
+      {% endif %}
+    </span>
   </div>
   <div class="body">
     {{ post.excerpt }}

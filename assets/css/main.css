@@ -40,3 +40,14 @@ div.post img {
   border-top-width: 3px;
   border-bottom-width: 3px;
 }
+
+/* Post Lists */
+div.list-post {
+  margin: 20px 0 0 0;
+}
+div.list-post div.body {
+  padding: 0 0 0 10px;
+}
+div.list-post span.meta {
+  color: #8A8A8A;
+}

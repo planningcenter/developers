@@ -11,20 +11,13 @@ Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Aenean eu 
 Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
 
 ```objc
-  if (attachment.link) {
-        if ([delegate respondsToSelector:@selector(didLoadAttachmentURL:)]) {
-            [delegate didLoadAttachmentURL:attachment];
-        }
-        if ([delegate respondsToSelector:@selector(didOpenAttachment:)]) {
-            [delegate didOpenAttachment:attachment];
-        }
-        if (![delegate openUnknownAttachment:attachment URL:[NSURL URLWithString:attachment.link]]) {
-            if ([delegate respondsToSelector:@selector(failedToOpenAttachment:error:)]) {
-                [delegate failedToOpenAttachment:attachment error:openFailedError];
-            }
-        }
-        return;
-    }
+  self.loadingWindow.rootViewController = self.viewController;
+  [self.loadingWindow makeKeyAndVisible];
+  [UIView animateWithDuration:ANIMATE(ani) animations:^{
+      self.viewController.view.alpha = 1.0;
+  } completion:^(BOOL finished) {
+      [self.viewController.loadingView setNeedsLayout];
+  }];
 ```
 
 Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Nulla vitae elit libero, a pharetra augue.

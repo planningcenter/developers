@@ -7,7 +7,7 @@ title: Planning Center Developers | Mobile
   <div class="posts col-md-12">
     {% for post in site.posts %}
       {% if post.team == 'mobile' %}
-        {{ post.title }}
+        {% include post_list.html %}
       {% endif %}
     {% endfor %}
   </div>
