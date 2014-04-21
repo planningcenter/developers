@@ -1,4 +1,4 @@
 name: Planning Center Engineering
 markdown: redcarpet
 pygments: true
-exclude: ["Rakefile"]
+exclude: ["Rakefile","README.md","helpers.rb",".defaults"]
