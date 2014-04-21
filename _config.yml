@@ -1,0 +1,4 @@
+name: Planning Center Engineering
+markdown: redcarpet
+pygments: true
+exclude: ["Rakefile"]
