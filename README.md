@@ -10,6 +10,19 @@ Creating a new post is easy.
 3. Write
 4. Create a pull request into the `gh-pages` branch of this repo.
 
+The post header has some values already filled in for you.
+
+- `layout` - The layout to use when building the post page.
+- `title` - The tile for your post.
+- `date` - The date of the post.
+
+There are some optional values you can set.
+
+- `team` - The team this should be catigorized under. `devops | mobile | web`
+- `author` - Your name
+
+
+
 ***
 
 #### Preferences

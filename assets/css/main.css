@@ -1,11 +1,42 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
 
+
+/* Global */
 body {
   font-family: Montserrat, Helvetica, Sans-Serif;
+  max-width: 1000px;
+  margin: 0 auto 0 auto;
+  padding: 0 10px 0 10px;
+}
+a {
+  color: #3A79C4;
 }
 
+
+/* Sections */
 div.footer {
   margin: 30px 0 0 0;
   border: solid 0px #EFEFEF;
   border-top-width: 3px;
+}
+
+
+/* Post */
+div.post div.title {
+  font-size: 2em;
+}
+div.post div.meta {
+  color: #8A8A8A;
+  margin: 0 0 10px 10px;
+  padding: 0 0 10px 0;
+}
+div.post img {
+  max-width: 90%;
+  height: auto;
+  padding: 10px;
+  margin: 0 auto 0 auto;
+  display: block;
+  border: solid 0px #EFEFEF;
+  border-top-width: 3px;
+  border-bottom-width: 3px;
 }

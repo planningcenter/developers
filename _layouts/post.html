@@ -2,10 +2,19 @@
 layout: default
 ---
 
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
-<p class="team">{{ page.team }}</p>
-
 <div class="post">
-{{ content }}
+  <div class="title">{{ page.title }}</div>
+  <div class="meta">
+    <span="date">{{ page.date | date_to_string }}</span>
+    {% if page.team %}
+      &mdash; {{ page.team | capitalize }}
+    {% endif %}
+    {% if page.author %}
+      &mdash; {{ page.author }}
+    {% endif %}
+  </div>
+
+  <div class="body">
+  {{ content }}
+  </div>
 </div>
