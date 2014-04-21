@@ -1,4 +1,5 @@
 name: Planning Center Developers
 markdown: redcarpet
 pygments: true
-exclude: ["Rakefile","README.md","helpers.rb",".defaults"]
+exclude: ["Rakefile","README.md","helpers.rb"]
+timezone: "America/Los_Angeles"

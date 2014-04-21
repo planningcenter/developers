@@ -1,0 +1,14 @@
+---
+layout: default
+title: Planning Center Developers | DevOps
+---
+
+<div class="row">
+  <div class="posts col-md-12">
+    {% for post in site.posts %}
+      {% if post.team == 'devops' %}
+        {{ post.title }}
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

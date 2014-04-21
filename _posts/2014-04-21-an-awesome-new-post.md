@@ -2,7 +2,7 @@
 layout: post
 title:  "An awesome new post"
 date:   2014-04-21 09:50:51
-team:   Mobile
+team:   mobile
 ---
 
 Donec id elit non mi porta gravida at eget metus. Donec sed odio dui. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Maecenas faucibus mollis interdum. Vestibulum id ligula porta felis euismod semper.

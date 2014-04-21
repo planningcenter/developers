@@ -3,11 +3,10 @@ layout: default
 title: Planning Center Developers
 ---
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+<div class="row">
+  <div class="posts col-md-12">
+    {% for post in site.posts limit: 10 %}
+      {% include post_list.html %}
     {% endfor %}
-  </ul>
+  </div>
 </div>
