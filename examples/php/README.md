@@ -8,19 +8,9 @@ Set your consumer key, consumer secret and callback url in `oauth_config.php`. (
 
 Now visit `index.php`. Tada!
 
-## Oauth. How does it work?
+## What's going on?
 
-* User visits `/index.php` 
-* A new OAuth object is instantatied in `oauth_config.php` with your consumer key and secret. (At this point, line 8 does nothing because your cookie is empty). 
-* The OAuth object gets a new request token from PCO. 
-* The request token is stored in a cookie. 
-* The user is forwarded to PCO to authorize the request token to access their account. 
-
-* The user is sent back to `callback.php`. 
-* A new OAuth object is instantiated, and it's told to use the request token stored in our cookie for subsequent requests. 
-* The OAuth object requets an access token from PCO. 
-* We replace the request token stored in our cookie with the access token. 
-
-* The user is forwarded to `me.php` 
-* An OAuth object is instantiated, and now uses the access token for requests. 
-* We use the OAuth object to make a request to `http://planningcenteronline.com/me.json` 
+* An OAuth object is created and used to get a request token from PCO.
+* The user is sent to PCO to authorize the request token to access their account.
+* Once authorized, the request token is swapped for an access token.
+* The access token is used to make subsequent requests on the user's behalf.
