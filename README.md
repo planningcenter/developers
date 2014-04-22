@@ -10,7 +10,15 @@ This repository provides documentation and examples for interacting with our app
 
 ## Authentication
 
-Our applictions, such as [Planning Center Services](http://services.planningcenteronline.com), use [OAuth 2.0](http://oauth.net/2/) in order to allow users to log in through third-party applications.
+Our applictions, such as [Planning Center Services](http://services.planningcenteronline.com), use [OAuth 1.0](http://oauth.net/core/1.0) in order to allow users to log in through third-party applications.
+
+You will need to obtain API keys by emailing [support](mailto:support@planningcenteronline.com). Be sure to include a URL for you app or church in your request.
+
+## Example Applications
+
+There are example applications available to get you started.
+
+- [PHP](/examples/php)
 
 ## Support
 
