@@ -1,22 +1,12 @@
-Ministry Centered Technologies
-==============================
-
-This repository provides documentation and examples for interacting with our applications' APIs.
-
-- [Authentication](#authentication)
-- [Support](#support)
-
-------------------------------
+# Planning Center Online Third Party Developer Support
 
 ## Authentication
 
-Our applictions, such as [Planning Center Services](http://services.planningcenteronline.com), use [OAuth 1.0](http://oauth.net/core/1.0) in order to allow users to log in through third-party applications.
+[Planning Center Services](http://services.planningcenteronline.com) uses [OAuth 1.0](http://oauth.net/core/1.0) to allow users to log in through third-party applications. OAuth can be tricky if you are new to it, but we have example applications below to get you started.
 
-You will need to obtain API keys by emailing [support](mailto:support@planningcenteronline.com). Be sure to include a URL for your app or church in your request.
+Before integrating your app with PCO, you'll need to request API keys by emailing [support](mailto:support@planningcenteronline.com). Be sure to include a URL for your app or church in your request.
 
 ## Example Applications
-
-There are example applications available to get you started.
 
 - [Ruby](/example/ruby)
 - [PHP](/examples/php)
