@@ -40,7 +40,7 @@ body .row
   display: block;
   width: 100%;
   float: none;
-  padding: 250px 0px;
+  padding: 150px 0px;
   text-align: center;
 }
 
@@ -69,8 +69,9 @@ body .row
 
 #content
 {
-  max-width: 750px;
+  max-width: 780px;
   margin: 0px auto;
+  padding: 0px 30px;
 }
 
 /* Post */
@@ -98,12 +99,10 @@ body .row
 
 #content .post .title .meta
 {
-  position: absolute;
-  top: 22px;
-  right: 10px;
   font-size: 15px;
   font-family: Montserrat, Helvetica, Sans-Serif;
-  font-style: normal
+  font-style: normal;
+  text-align: center;
 }
 
 #content .posts p, #content .post p
@@ -124,6 +123,7 @@ body .row
   font-size: 2em;
   font-style: italic;
   color: #d35248;
+  text-align: center;
 }
 
 .list-post 
@@ -140,13 +140,12 @@ body .row
   display: block;
   overflow: auto;
   padding: 9px 0px;
+  text-align: center;
 }
 .list-post span.meta
 {
-  position: absolute;
-  top: 22px;
-  right: 10px;
-  font-size: 15px;
+  display: block;
+  text-align: center;
 }
 
 .list-post .title .meta .date
@@ -206,21 +205,23 @@ body .row
 
 .bottom-footer .copyright
 {
-  float: right;
+  display: block;
   margin: 20px;
+  text-align: center;
 }
 
 .footer-links
 {
-  float: left;
+  display: block;
   margin: 20px;
 }
 
 .footer-links li
 {
-  display: inline;
+  display: block;
   list-style: none;
-  padding: 0px 16px;
+  padding: 16px 16px;
+  text-align: center;
 }
 
 .footer-links li a

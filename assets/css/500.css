@@ -1,0 +1,69 @@
+@media only screen and (min-width: 500px) {
+  .top-header-container 
+  {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+    float: none;
+    padding: 250px 0px;
+    text-align: center;
+  }
+  #content .post .title .meta 
+  {
+    position: absolute;
+    top: 22px; 
+    right: 10px;
+    font-size: 15px;
+    font-family: Montserrat, Helvetica, Sans-Serif;
+    font-style: normal;
+    text-align: left;
+  }
+  .footer-links li 
+  {
+    display: inline;
+    list-style: none;
+    padding: 0px 16px;
+    text-align: left;
+  }
+  .footer-links 
+  {
+    float: left;
+    margin: 20px;
+  }
+
+  .list-post .title a, #content .post .title 
+  {
+    font-family: Georgia;
+    font-size: 2em;
+    font-style: italic;
+    color: #d35248;
+    text-align: left;
+  }
+
+  .bottom-footer .copyright 
+  {
+    float: right;
+    margin: 20px;
+    text-align: left;
+  }
+
+  .list-post span.meta 
+  {
+    position: absolute;
+    top: 22px;
+    right: 10px;
+    font-size: 15px;
+  }
+
+  .list-post .title {
+    position: relative;
+    border-bottom: 1px solid #aeaeae;
+    margin-bottom: 20px;
+    display: block;
+    overflow: auto;
+    padding: 9px 0px;
+    text-align: left;
+  }
+
+}
