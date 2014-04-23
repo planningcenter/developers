@@ -228,3 +228,32 @@ body .row
 {
   color: #fff;
 }
+
+/*Archive*/
+
+#content .main-archive
+{
+  margin-top: 70px;
+  text-align: center;
+}
+
+
+#content .main-archive .year
+{
+  font-size: 3em;
+  font-family: Georgia;
+  font-style: italic;
+  color: #d35248;
+}
+
+#content .main-archive .post-title
+{
+  font-size: 1.2em;
+  padding: 8px 0px;
+}
+
+#content .main-archive .post-title a
+{
+  color: #838383;
+}
+

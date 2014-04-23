@@ -3,23 +3,23 @@ layout: default
 title: Planning Center Developers | Archive
 ---
 
-<div class="row">
-  <div class="archive col-md-12">
-    {% for post in site.posts %}
-      {% unless post.next %}
+
+<div class="archive main-archive">
+  {% for post in site.posts %}
+    {% unless post.next %}
+      <div class="year">{{ post.date | date: '%Y' }}</div>
+    {% else %}
+      {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+      {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+      {% if year != nyear %}
         <div class="year">{{ post.date | date: '%Y' }}</div>
-      {% else %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-        {% if year != nyear %}
-          <div class="year">{{ post.date | date: '%Y' }}</div>
-        {% endif %}
-      {% endunless %}
-      {% if post.link == nil %}
-        <div class="post-title">
-          <span>{{ post.date | date:"%b %d" }}</span> &mdash; <a href="{{ post.url }}">{{ post.title }}</a>
-        </div>
       {% endif %}
-    {% endfor %}
-  </div>
+    {% endunless %}
+    {% if post.link == nil %}
+      <div class="post-title">
+        <span>{{ post.date | date:"%b %d" }}</span> &mdash; <a href="{{ post.url }}">{{ post.title }}</a>
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>
+
