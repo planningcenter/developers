@@ -9,8 +9,9 @@ CONSUMER_SECRET = 'YOUR_CONSUMER_SECRET'
 CALLBACK_URL = 'http://localhost:4567/callback'
 
 get '/' do
-  consumer = OAuth::Consumer.new(CONSUMER_KEY, CONSUMER_SECRET, site: "https://services.planningcenteronline.com")
-  session[:request_token] = consumer.get_request_token(oauth_callback: CALLBACK_URL)
+  consumer = OAuth::Consumer.new(CONSUMER_KEY, CONSUMER_SECRET, site: "http://services.pco.dev")
+  request_token = consumer.get_request_token(oauth_callback: CALLBACK_URL)
+  session[:request_token] = request_token
   redirect to(request_token.authorize_url)
 end
 
