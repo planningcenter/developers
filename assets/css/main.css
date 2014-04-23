@@ -63,11 +63,26 @@ a {
   font-weight: normal;
 }
 
-/* Post */
-div.post div.title 
+#content
 {
-
+  max-width: 750px;
+  margin: 0px auto;
 }
+
+/* Post */
+.list-post .title a
+{
+  font-family: Georgia;
+  font-size: 2em;
+  font-style: italic;
+}
+
+#content .posts p
+{
+  color: #626262;
+  font-size: 1.2em;
+}
+
 div.post div.meta 
 {
 
@@ -78,9 +93,11 @@ div.post img
 }
 
 /* Post Lists */
-div.list-post 
+.list-post 
 {
-
+  margin-top: 140px;
+  display: block;
+  overflow: auto;
 }
 div.list-post div.body 
 {
