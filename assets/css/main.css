@@ -74,7 +74,51 @@ body .row
 }
 
 /* Post */
-.list-post .title a
+
+#content .post
+{
+  margin-top: 30px;
+}
+
+#content .post img
+{
+  width: 100%;
+  margin: 40px auto;
+}
+
+#content .post .title
+{
+  position: relative;
+  border-bottom: 1px solid #aeaeae;
+  margin-bottom: 20px;
+  display: block;
+  overflow: auto;
+  padding: 9px 0px;
+}
+
+#content .post .title .meta
+{
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  font-size: 15px;
+  font-family: Montserrat, Helvetica, Sans-Serif;
+  font-style: normal
+}
+
+#content .posts p, #content .post p
+{
+  color: #626262;
+  font-size: 1.2em;
+}
+
+.highlight
+{
+  margin: 40px 0px;
+}
+
+/* List Post */
+.list-post .title a, #content .post .title
 {
   font-family: Georgia;
   font-size: 2em;
@@ -82,13 +126,6 @@ body .row
   color: #d35248;
 }
 
-#content .posts p
-{
-  color: #626262;
-  font-size: 1.2em;
-}
-
-/* Post Lists */
 .list-post 
 {
   margin-top: 140px;
@@ -104,7 +141,7 @@ body .row
   overflow: auto;
   padding: 9px 0px;
 }
-.list-post span.meta 
+.list-post span.meta
 {
   position: absolute;
   top: 22px;

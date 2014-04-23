@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="post">
-  <div class="title">{{ page.title }}</div>
+  <div class="title">{{ page.title }}
   <div class="meta">
     <span="date">{{ page.date | date_to_string }}</span>
     {% if page.team %}
@@ -12,6 +12,7 @@ layout: default
     {% if page.author %}
       {{ page.author }}
     {% endif %}
+  </div>
   </div>
 
   <div class="body">
