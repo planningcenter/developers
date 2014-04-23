@@ -5,11 +5,11 @@
     </a>
     <span class="meta">
       <span class="date">
-        &mdash; {{ post.date | date: "%d %b, %Y" }}
+        {{ post.date | date: "%d %b, %Y" }}
       </span>
       {% if post.team %}
         <span class="team">
-          &mdash; {{ post.team | capitalize }}
+          {{ post.team | capitalize }}
         </span>
       {% endif %}
     </span>

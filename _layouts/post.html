@@ -7,10 +7,10 @@ layout: default
   <div class="meta">
     <span="date">{{ page.date | date_to_string }}</span>
     {% if page.team %}
-      &mdash; {{ page.team | capitalize }}
+      {{ page.team | capitalize }}
     {% endif %}
     {% if page.author %}
-      &mdash; {{ page.author }}
+      {{ page.author }}
     {% endif %}
   </div>
 

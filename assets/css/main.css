@@ -17,6 +17,10 @@ a {
   color: #3A79C4;
 }
 
+body .row
+{
+  margin: 0px;
+}
 
 /* Sections */
 .header
@@ -75,21 +79,13 @@ a {
   font-family: Georgia;
   font-size: 2em;
   font-style: italic;
+  color: #d35248;
 }
 
 #content .posts p
 {
   color: #626262;
   font-size: 1.2em;
-}
-
-div.post div.meta 
-{
-
-}
-div.post img 
-{
-
 }
 
 /* Post Lists */
@@ -99,11 +95,67 @@ div.post img
   display: block;
   overflow: auto;
 }
-div.list-post div.body 
+.list-post .title
 {
-
+  position: relative;
+  border-bottom: 1px solid #aeaeae;
+  margin-bottom: 20px;
+  display: block;
+  overflow: auto;
+  padding: 9px 0px;
 }
-div.list-post span.meta 
+.list-post span.meta 
 {
+  position: absolute;
+  top: 22px;
+  right: 10px;
+  font-size: 15px;
+}
 
+.list-post .title .meta .date
+{
+  color: #454545;
+}
+
+.list-post .title .meta .team
+{
+  color: #d35248;
+}
+
+/* Footer Styles */
+
+
+#archive-section
+{
+  background-color: #282828;
+  text-align: center;
+  padding: 130px 0px;
+  margin-top: 130px;
+}
+
+#archive-section ul.teams
+{
+  color: #9c9c9c;
+}
+
+#archive-section ul.teams li
+{
+  list-style: none;
+  display: inline;
+  font-size: 18px;
+  padding: 0px 10px;
+}
+
+#archive-section ul.teams li a
+{
+  color: #d35248;
+}
+
+
+.archive-title
+{
+  color: #fff;
+  font-size: 2em;
+  font-family: Georgia;
+  font-style: italic;
 }
