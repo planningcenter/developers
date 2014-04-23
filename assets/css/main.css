@@ -2,11 +2,16 @@
 
 
 /* Global */
+
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+
 body {
   font-family: Montserrat, Helvetica, Sans-Serif;
-  max-width: 1000px;
-  margin: 0 auto 0 auto;
-  padding: 0 10px 0 10px;
+  width: 100%;
 }
 a {
   color: #3A79C4;
@@ -14,40 +19,74 @@ a {
 
 
 /* Sections */
-div.footer {
-  margin: 30px 0 0 0;
-  border: solid 0px #EFEFEF;
-  border-top-width: 3px;
+.header
+{
+  background-color: #282828;
 }
 
+.top-header
+{
+  height: 550px;  
+}
+
+.top-header-container
+{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  float: none;
+  padding: 250px 0px;
+  text-align: center;
+}
+
+.top-header-container a
+{
+  color: #fff;
+  text-decoration: none;
+  font-size: 3em;
+}
+
+.top-header-container .tagline
+{
+  display: block;
+  color: #666666;
+  font-family: Georgia;
+  font-size: 1.5em;
+  font-style: italic;
+  padding-top: 5px;
+}
+
+.top-header-container .tagline strong
+{
+  color: #fff;
+  font-weight: normal;
+}
 
 /* Post */
-div.post div.title {
-  font-size: 2em;
+div.post div.title 
+{
+
 }
-div.post div.meta {
-  color: #8A8A8A;
-  margin: 0 0 10px 10px;
-  padding: 0 0 10px 0;
+div.post div.meta 
+{
+
 }
-div.post img {
-  max-width: 90%;
-  height: auto;
-  padding: 10px;
-  margin: 0 auto 0 auto;
-  display: block;
-  border: solid 0px #EFEFEF;
-  border-top-width: 3px;
-  border-bottom-width: 3px;
+div.post img 
+{
+
 }
 
 /* Post Lists */
-div.list-post {
-  margin: 20px 0 0 0;
+div.list-post 
+{
+
 }
-div.list-post div.body {
-  padding: 0 0 0 10px;
+div.list-post div.body 
+{
+
 }
-div.list-post span.meta {
-  color: #8A8A8A;
+div.list-post span.meta 
+{
+
 }
