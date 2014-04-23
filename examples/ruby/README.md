@@ -1,6 +1,6 @@
 # PCO API Example in Ruby
 
-A quick (Sinatra)[http://sinatrarb.com] app to authenticate via OAuth and make a simple request.
+A quick [Sinatra](http://sinatrarb.com) app to authenticate via OAuth and make a simple request.
 
 ## Getting Started
 
