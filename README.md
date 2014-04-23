@@ -3,12 +3,18 @@ Ministry Centered Technologies
 
 ## Engineering Blog
 
-Creating a new post is easy.  
+Getting set up.
+
+1. Clone this repo's `gh-pages` branch. `git clone https://github.com/ministrycentered/developers.git -b gh-pages`
+2. If you're going to work on the blog itself run `bundle install`
+
+Creating a new post.  
 
 1. Create a new branch.
 2. Run `rake post:new["My Post Title"]`
 3. Write
-4. Create a pull request into the `gh-pages` branch of this repo.
+4. Push to GitHub
+5. Create a pull request into the `gh-pages` branch of this repo.
 
 The post header has some values already filled in for you.
 
@@ -18,7 +24,7 @@ The post header has some values already filled in for you.
 
 There are some optional values you can set.
 
-- `team` - The team this should be catigorized under. `devops | mobile | web`
+- `team` - The team this should be categorized under. `devops | mobile | web`
 - `author` - Your name
 
 
