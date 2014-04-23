@@ -9,6 +9,6 @@
   setcookie('oauth_token',        $oauth_token);
   setcookie('oauth_token_secret', $oauth_token_secret);
 
-  header("Location: https://www.planningcenteronline.com/oauth/authorize?oauth_token=$oauth_token");
+  header("Location: https://services.planningcenteronline.com/oauth/authorize?oauth_token=$oauth_token");
 ?>
 
