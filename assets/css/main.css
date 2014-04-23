@@ -136,6 +136,7 @@ body .row
 #archive-section ul.teams
 {
   color: #9c9c9c;
+  margin-top: 20px;
 }
 
 #archive-section ul.teams li
@@ -169,12 +170,20 @@ body .row
 .bottom-footer .copyright
 {
   float: right;
+  margin: 20px;
+}
+
+.footer-links
+{
+  float: left;
+  margin: 20px;
 }
 
 .footer-links li
 {
   display: inline;
   list-style: none;
+  padding: 0px 16px;
 }
 
 .footer-links li a
