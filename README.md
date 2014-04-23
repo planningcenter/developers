@@ -1,4 +1,4 @@
-# Planning Center Online Third Party Developer Support
+# PCO Third Party Developer Support
 
 ## Authentication
 
