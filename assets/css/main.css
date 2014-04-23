@@ -159,3 +159,25 @@ body .row
   font-family: Georgia;
   font-style: italic;
 }
+
+.bottom-footer
+{
+  background-color: #171717;
+  overflow: auto;
+}
+
+.bottom-footer .copyright
+{
+  float: right;
+}
+
+.footer-links li
+{
+  display: inline;
+  list-style: none;
+}
+
+.footer-links li a
+{
+  color: #fff;
+}
