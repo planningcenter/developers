@@ -44,3 +44,5 @@ Your preferred markdown editor.  [Mou](http://mouapp.com) is a pretty good one.
 ```
 rake prefs:editor["Mou"]
 ```
+
+The name of the app should be the same that would open by running `open -a <name> ./file.md`
