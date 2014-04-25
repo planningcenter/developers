@@ -8,9 +8,6 @@ Set your consumer key, consumer secret and callback url in `oauth_config.php`. (
 
 Now visit `index.php`. Tada!
 
-## What's going on?
+## More Information
 
-* An OAuth object is created and used to get a request token from PCO.
-* The user is sent to PCO to authorize the request token to access their account.
-* Once authorized, the request token is swapped for an access token.
-* The access token is used to make subsequent requests on the user's behalf.
+[PCO Developers](https://github.com/ministrycentered/developers)
