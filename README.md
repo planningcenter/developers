@@ -1,8 +1,10 @@
 # PCO API Developer Support
 
+Planning Center has an API that allows you to access most of the information about your plans, people, songs, arrangements, etc. Documentation on the available API endpoints is [available here](http://get.planningcenteronline.com/api).
+
 ## Authentication
 
-[Planning Center Services](http://services.planningcenteronline.com) uses [OAuth 1.0](http://oauth.net/core/1.0) to allow users to log in through third-party applications. OAuth can be tricky if you are new to it, but we have example applications below to get you started.
+We use [OAuth 1.0](http://oauth.net/core/1.0) to allow third party applications access to your data without using your password. OAuth can be tricky if you are new to it, but we have example applications below to get you started.
 
 Before integrating your app with PCO, you'll need to request API keys by emailing [support](mailto:support@planningcenteronline.com). Be sure to include a URL for your app or church in your request.
 
