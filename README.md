@@ -36,4 +36,4 @@ There are a couple of third party tools to simplify working with the API. While 
 
 ## Support
 
-If you have any questions or feature requests, post them in the [issues](/ministrycentered/developers/issues) section of this repository and one of our developers will respond to you shortly.
+If you have any questions or feature requests, post an [issue](https://github.com/ministrycentered/developers/issues). We'll take a look and get back to you asap.
