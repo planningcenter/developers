@@ -3,6 +3,7 @@ layout: post
 title:  "Core Data at Planning Center"
 date:   2014-05-01 08:42:56
 author: Skylar Schipper
+header: /assets/images/core-data-logo.jpg
 team:   mobile
 ---
 
