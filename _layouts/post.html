@@ -3,14 +3,19 @@ layout: default
 ---
 
 <div class="post">
+
+  {% if page.header %}
+    <img id="post-header" alt="{{ page.title }} Header" src="{{ page.header }}" />
+  {% endif %}
+
   <div class="title">{{ page.title }}
   <div class="meta">
     <span="date">{{ page.date | date_to_string }}</span>
     {% if page.team %}
-      {{ page.team | capitalize }}
+      &mdash; {{ page.team | capitalize }}
     {% endif %}
     {% if page.author %}
-      {{ page.author }}
+      &mdash; {{ page.author }}
     {% endif %}
   </div>
   </div>

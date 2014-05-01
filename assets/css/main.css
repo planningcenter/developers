@@ -30,7 +30,7 @@ body .row
 
 .top-header
 {
-  height: 550px;  
+  height: 550px;
 }
 
 .top-header-container
@@ -81,11 +81,13 @@ body .row
   margin-top: 30px;
 }
 
-#content .post img
+#content .post #post-header
 {
-  width: 100%;
-  margin: 40px auto;
+  max-height: 100px;
+  margin: 0 auto 30px auto;
+  display: block;
 }
+
 
 #content .post .title
 {
@@ -103,6 +105,12 @@ body .row
   font-family: Montserrat, Helvetica, Sans-Serif;
   font-style: normal;
   text-align: center;
+}
+
+#content .post .body img
+{
+  width: 100%;
+  margin: 40px auto;
 }
 
 #content .posts p, #content .post p
@@ -126,7 +134,7 @@ body .row
   text-align: center;
 }
 
-.list-post 
+.list-post
 {
   margin-top: 140px;
   display: block;
@@ -196,6 +204,10 @@ body .row
   font-family: Georgia;
   font-style: italic;
 }
+.archive-title:hover
+{
+  color: #fff;
+}
 
 .bottom-footer
 {
@@ -256,4 +268,3 @@ body .row
 {
   color: #838383;
 }
-
