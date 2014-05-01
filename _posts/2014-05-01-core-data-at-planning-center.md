@@ -6,7 +6,7 @@ author: Skylar Schipper
 team:   mobile
 ---
 
-Each of the iOS apps at Planning Center make heavy use of [Core Data][0]. We don't use it in the traditional sense of the users data store.  Instead, we use it as a cache. Using Core Data as a cache allows up to display pre-fetched data to a user. It speeds up interactions for the user and gives us compile time checking for data access.
+Each of the iOS apps at Planning Center make heavy use of [Core Data][0]. We don't use it in the traditional sense of the users data store.  Instead, we use it as a cache. Using Core Data as a cache allows us to display pre-fetched data to a user. It speeds up interactions for the user and gives us compile time checking for data access.
 
 Core Data has always had an interesting stance in the iOS/Mac developer community. People either love it or hate it. There are sharp edges and pain points, but those come with any framework. For us, those edges aren't as sharp as the hassle of rolling our own implementation. There are other options out there, and we use some of them (more on that in a later post).
 
