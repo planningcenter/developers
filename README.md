@@ -19,7 +19,7 @@ Here are some apps showing how to use your access token:
 - [Ruby](/examples/ruby-single-user)
 - [PHP](/examples/php-single-user)
 
-### Mulit User Authentication
+### Multi User Authentication
 
 If you are building an application that will need to log in on behalf of other PCO users, you will need to build a standard implementation of OAuth.
 
