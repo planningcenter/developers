@@ -4,7 +4,7 @@ Planning Center has an API that allows you to access most of the information abo
 
 ## Authentication
 
-We use [OAuth 1.0](http://oauth.net/core/1.0) to allow third party applications access to your data without using your password. OAuth can be tricky if you are new to it, but we have example applications below to get you started.
+We use [OAuth 1.0](http://oauth.net/core/1.0) to allow third party applications access to your data without using your password. OAuth can be tricky if you are new to it, but we have example applications below to get you started.  Keep in mind we currently support [PLANTEXT](http://tools.ietf.org/html/rfc5849#section-3.4.4) method for OAuth signatures.
 
 Before integrating your app with PCO, you'll need to request API keys by emailing [support](mailto:support@planningcenteronline.com). Be sure to include a URL for your app or church in your request.
 
