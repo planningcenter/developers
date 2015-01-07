@@ -17,7 +17,8 @@ Once you've received your consumer key and secret by emailing support, you can u
 Here are some apps showing how to use your access token:
 
 - [Ruby](/examples/ruby-single-user)
-- [PHP](/examples/php-single-user)
+- [PHP (PECL Library)](/examples/php-single-user)
+- [PHP (OAuth Library)](/examples/php-single-user-oauthlib)
 
 ### Multi User Authentication
 
