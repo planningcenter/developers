@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'oauth'
+require 'oauth/signature/plaintext'
 require 'json'
 
 SESSION_SECRET = 'RANDOMLY_GENERATED_STRING'
@@ -11,7 +12,7 @@ CONSUMER_SECRET = 'YOUR_CONSUMER_SECRET'
 CALLBACK_URL    = 'http://localhost:4567/callback'
 
 def consumer
-  @consumer ||= OAuth::Consumer.new(CONSUMER_KEY, CONSUMER_SECRET, site: "https://services.planningcenteronline.com")
+  @consumer ||= OAuth::Consumer.new(CONSUMER_KEY, CONSUMER_SECRET, site: "https://services.planningcenteronline.com", signature_method: 'plaintext')
 end
 
 def token_to_hash(token)
