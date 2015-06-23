@@ -2,4 +2,4 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'json'
-gem 'oauth', '~> 0.4.7'
+gem 'oauth'
