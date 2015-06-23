@@ -5,8 +5,8 @@ CONSUMER_KEY        = 'YOUR_CONSUMER_KEY'
 CONSUMER_SECRET     = 'YOUR_CONSUMER_SECRET'
 
 # Get these from http://accesstoken.io
-ACCESS_TOKEN_KEY    = 'YOUR_ACCCESS_TOKEN_KEY'
-ACCESS_TOKEN_SECRET = 'YOUR_ACCESSS_TOKEN_SECRET'
+ACCESS_TOKEN_KEY    = 'YOUR_ACCESS_TOKEN_KEY'
+ACCESS_TOKEN_SECRET = 'YOUR_ACCESS_TOKEN_SECRET'
 
 consumer = OAuth::Consumer.new(CONSUMER_KEY, CONSUMER_SECRET, site: 'https://services.planningcenteronline.com')
 access_token = OAuth::AccessToken.from_hash(consumer, { oauth_token: ACCESS_TOKEN_KEY, oauth_token_secret: ACCESS_TOKEN_SECRET } )
