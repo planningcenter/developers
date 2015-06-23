@@ -28,5 +28,5 @@ get '/me' do
   response = access_token.get('/me.json')
 
   body = JSON.parse(response.body)
-  "Hello " + body["first_name"]
+  "Hello #{body["first_name"]}"
 end

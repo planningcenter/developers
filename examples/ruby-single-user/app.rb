@@ -14,5 +14,5 @@ access_token = OAuth::AccessToken.from_hash(consumer, { oauth_token: ACCESS_TOKE
 response = access_token.get('/me.json')
 me = JSON.parse(response.body)
 
-puts "Hello " + me["first_name"]
+puts "Hello #{me["first_name"]}"
 
