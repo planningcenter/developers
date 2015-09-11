@@ -16,7 +16,7 @@ curl -u application_id:secret https://api.planningcenteronline.com/services/v2/
 
 ### Multi User Authentication
 
-If you are building an application that will need to log in on behalf of other PCO users, you will use [OAuth 2]http://oauth.net/2/) to authenticate users in your application.
+If you are building an application that will need to log in on behalf of other PCO users, you will use [OAuth 2](http://oauth.net/2/) to authenticate users in your application.
 
 You can register your application and get your Client ID and Secret [here](https://api.planningcenteronline.com/oauth/applications).
 
