@@ -1,3 +1,7 @@
+**API `v1` is deprecated**
+
+***
+
 # PHP OAuth Library Example
 
 If you are not able to do use the [OAuth PECL](/examples/php-pecl) extenstion you can use this library. It is more complicated to use, but easier to install.

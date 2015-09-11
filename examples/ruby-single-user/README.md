@@ -1,3 +1,7 @@
+**API `v1` is deprecated**
+
+***
+
 # PCO API Single User Example in Ruby
 
 A quick Ruby script to authenticate via OAuth 1.0a and make a simple request.
