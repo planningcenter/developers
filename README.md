@@ -20,6 +20,8 @@ If you are building an application that will need to log in on behalf of other P
 
 You can register your application and get your Client ID and Secret [here](https://api.planningcenteronline.com/oauth/applications).
 
+We have a [Ruby example for authenticating with OAuth 2](https://github.com/planningcenter/pco_api_oauth_example).
+
 ## Working with the API
 
 All data is returned according to the [JSONAPI 1.0 spec](http://jsonapi.org).
