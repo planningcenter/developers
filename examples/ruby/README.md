@@ -1,3 +1,7 @@
+**API `v1` is deprecated**
+
+***
+
 # PCO API Example in Ruby
 
 A quick [Sinatra](http://sinatrarb.com) app to authenticate via OAuth 1.0a and make a simple request.

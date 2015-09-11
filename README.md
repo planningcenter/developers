@@ -1,41 +1,30 @@
-# PCO Services API Developer Support
+# PCO API Developer Support
 
-Planning Center Services has an API that allows you to access most of the information about your plans, people, songs, arrangements, etc. Documentation on the available API endpoints is [available here](http://get.planningcenteronline.com/api).
+Planning Center has an API that allows you to access most of the information in your account, across multiple apps. Documentation on the available API endpoints is [available here](http://planningcenter.github.io/api-docs/).
 
 ## Authentication
 
-We use [OAuth 1.0a](http://oauth.net/core/1.0) to allow third party applications access to your data without using your password. OAuth can be tricky if you are new to it, but we have example applications below to get you started.  Keep in mind we currently support [PLAINTEXT](http://tools.ietf.org/html/rfc5849#section-3.4.4) method for OAuth signatures.
-
-Before integrating your app with PCO Services, you'll need to request API keys by emailing [support](mailto:support@planningcenteronline.com). Be sure to include a URL for your app or church in your request.
-
 ### Single User Authentication
 
-If your app only needs access to your own data, this is the easiest method for authentication. This is typically how apps that sync data to your ChMS work. In that case, OAuth is much easier to implement because you only need to obtain and reuse a single access token.
+If your app only needs access to your own data, this is the easiest method for authentication. This is typically how apps that sync data to your ChMS work.
 
-Once you've received your consumer key and secret by emailing support, you can use [accesstoken.io](http://accesstoken.io) to generate an access token for whichever user you are currently logged in as.
+You can get 'Personal Access Tokens' [here](https://api.planningcenteronline.com/oauth/applications).  You can then use HTTP basic auth to access the API.
 
-Here are some apps showing how to use your access token:
-
-- [Ruby](/examples/ruby-single-user)
-- [PHP (PECL Library)](/examples/php-single-user)
-- [PHP (OAuth Library)](/examples/php-single-user-oauthlib)
+```bash
+curl -u application_id:secret https://api.planningcenteronline.com/services/v2/
+```
 
 ### Multi User Authentication
 
-If you are building an application that will need to log in on behalf of other PCO users, you will need to build a standard implementation of OAuth.
+If you are building an application that will need to log in on behalf of other PCO users, you will use [OAuth 2](http://oauth.net/2/) to authenticate users in your application.
 
-Here's a couple examples to get you going:
+You can register your application and get your Client ID and Secret [here](https://api.planningcenteronline.com/oauth/applications).
 
-- [Ruby](/examples/ruby)
-- [PHP (PECL Library)](/examples/php-pecl) - The easiest way to do OAuth with PHP if you have the ability to install PECL extensions (or if it has already been installed).
-- [PHP (OAuth Library)](/examples/php-library) - Uses an OAuth library that can be required from your script. This library is more complicated to use, but it works if you are unable to use the prefered PECL method.
+We have a [Ruby example for authenticating with OAuth 2](https://github.com/planningcenter/pco_api_oauth_example).
 
 ## Working with the API
 
-There are a couple of third party tools to simplify working with the API. While not necessary, they may make your life easier.
-
-- [Ruby](https://github.com/molawson/planning_center)
-- [PHP](https://github.com/deboorn/PlanningCenterOnline-API-Helper)
+All data is returned according to the [JSONAPI 1.0 spec](http://jsonapi.org).
 
 ## Support
 

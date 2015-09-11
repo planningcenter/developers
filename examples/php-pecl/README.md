@@ -1,3 +1,7 @@
+**API `v1` is deprecated**
+
+***
+
 # PHP OAuth Extension Example
 
 This example uses the OAuth PECL extension. More info can be found here at (php.net)[http://www.php.net/manual/en/intro.oauth.php].
