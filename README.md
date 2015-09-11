@@ -26,6 +26,8 @@ We have a [Ruby example for authenticating with OAuth 2](https://github.com/plan
 
 All data is returned according to the [JSONAPI 1.0 spec](http://jsonapi.org).
 
+If you're creating a Ruby application we have the [pco_api gem](ttps://github.com/planningcenter/pco_api_ruby) to get you started.
+
 ## Support
 
 If you have any questions or feature requests, post an [issue](https://github.com/ministrycentered/developers/issues). We'll take a look and get back to you asap.
