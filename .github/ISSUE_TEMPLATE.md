@@ -2,18 +2,18 @@
 
 
 
-***
-
 ##### Steps to reproduce:
 
-##### Endpoint I'm using:
 
-##### Language I'm using:
+
+##### API endpoint I'm using:
+
+
+
+##### Programming language I'm using:
+
+
 
 ##### Authentication method I'm using:
 
-- [ ] OAuth 2
-
-- [ ] Personal Access Token
-
-- [ ] Cookies in the browser
+e.g. OAuth 2, Personal Access Token, Browser Session (Cookie)
