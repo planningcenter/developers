@@ -1,5 +1,7 @@
 ### Detailed Description of the Problem/Question
 
+<!-- PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO. -->
+
 
 
 ##### Steps to reproduce:
