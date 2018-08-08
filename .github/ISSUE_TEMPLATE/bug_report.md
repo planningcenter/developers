@@ -8,7 +8,7 @@ about: Create a report to help us improve
 Which app(s) does this bug affect?
 
 **Describe the bug**
-A clear and concise description of what the bug is.
+Provide a clear and concise description of the bug. If it is something that was previously working and suddenly broke your application, please let us know.
 
 *PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO.*
 
