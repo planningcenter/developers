@@ -1,6 +1,6 @@
 # PCO API Developer Support
 
-Planning Center has an API that allows you to access most of the information in your account, across multiple apps. Documentation on the available API endpoints is [available here](http://planningcenter.github.io/api-docs/).
+Planning Center has an API that allows you to access most of the information in your account, across multiple apps. Documentation on the available API endpoints is [available here](https://developer.planning.center/docs/).
 
 ## Authentication
 
