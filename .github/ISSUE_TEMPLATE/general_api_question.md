@@ -27,4 +27,4 @@ Add any other context or screenshots about the feature request here.
 - [ ] Reviewed the documentation found at https://developer.planning.center/docs
 - [ ] Searched for previous issues answering this question
 - [ ] Removed all private information from this issue (credentials, tokens, emails, phone numbers, etc.)
-- [ ] Reviewed my issue for completeness
+- [x] Reviewed my issue for completeness
