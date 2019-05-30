@@ -12,6 +12,12 @@ Most of the information you'll need about `Donation`s can be found in the [API d
 
 Each organization will have a set of one or more `Fund`s in their account that serve as buckets that donor's can effectively put money into and that the churches can use to organize their incoming gifts, set budgets, etc. All organizations will at least have a default `Fund`, usually named something like "General" or "Tithe".
 
+If you need that default fund for your app, you can query for it based on the `default` param:
+
+```
+GET https://api.planningcenteronline.com/giving/v2/funds?where[default]=true
+```
+
 ### `Designation`
 
 Each `Donation` can have one or more `Designations`.  The main purpose of a designation is to say how much of a `Donation`'s money is going to a given `Fund`.  If all of a `Donation` is going to a single `Fund`, then you'll only need the one designation, but because a single `Donation` can be split between multiple funds, you'll always need to include details about a `Donation`'s `Designation`s when creating the `Donation` (more details in the [docs](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/donation#permissions)).
