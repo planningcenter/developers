@@ -18,17 +18,17 @@ Each `Donation` can have one or more `Designations`.  The main purpose of a desi
 
 ### `PaymentSource`
 
-Every `Donation` must be associated with a `PaymentSource`. This tells Giving (and the Giving admins) what "system" originally accepted the `Donation`. In most cases, you'll want to create a `PaymentSource` for the system you're importing from and associate every `Donation` record with that `PaymentSource`.
+Every `Donation` must be associated with a `PaymentSource`. This tells Giving (and the Giving admins) what "system" originally accepted the `Donation`. You'll want to create a `PaymentSource` for your system and associate every `Donation` record with this `PaymentSource`. This Giving admins understand which donations in their Giving database were added by your system, via the API.
 
 ### `Batch`
 
-A `Batch` is almost entirely a grouping of `Donation`s. You're free to determine how to group the `Donation` records you're creating, as are each organization's administrators when creating `Batch`es in the web UI. This is the same mechanism that those admins will use to input check and cash donations manually.
+A `Batch` is a grouping of `Donation`s. You're free to determine how to group the `Donation` records you're creating, as are each organization's administrators when creating `Batch`es in the web UI. This is the same mechanism that those admins will use to input check and cash donations manually.
 
 When creating `Donation`'s via the API, you're required to put them in a `Batch`.
 
-The main thing to know with `Batch`es is the idea of a "committed" `Batch`. You can start adding `Donation`s to a `Batch` right after you've created it. But in that "uncommitted" default state, those `Donation`s will not be visible to donors. This can be helpful in making sure that the data is correct before making it visible to donors. Also, while a `Donation` is in this "uncommitted" or "pending" state, you can make changes to it as needed.
+The main thing to know with `Batch`es is the idea of a "committed" `Batch`. You can start adding `Donation`s to a `Batch` right after you've created it. Donations in an "uncommitted" `Batch` are considered to be "in progress." They won't show up in a donor's donation history online, they won't appear in any donor statements issued by the Giving admin, and changes to these donations are not flagged in the system log. Think of it as a staging area for donations.
 
-After a `Batch` is committed, all of the `Donation`'s within it are also marked as "committed". At that point, they're visible to donors and any further edits made to those `Donation`s are logged and visible to Giving admins.
+When a `Batch` is committed, all of the `Donation`'s within it are also marked as "committed". At that point, they're visible to donors in their online history and any further edits made to those `Donation`s are logged and visible to Giving admins.
 
 With all of that in mind, you can use `Batch`es in one of two ways:
 
@@ -41,7 +41,7 @@ Whichever route you decide to take, it's helpful to make use of the `Batch`'s `d
 
 ## Donors
 
-The way that donors are associated to `Donation`s is fairly straightforward, but the process of linking and keeping track of donors in your system with those in an organization's Planning Center account, and understanding the implications of why our system is setup the way it is, will likely be one of the more challenging part of your integration.  But getting this right will go a long way to making your integration work well for your customers.
+The way that donors are associated to `Donation`s is fairly straightforward, but the process of linking and keeping track of donors in your system with those in an organization's Planning Center account, and understanding the implications of why our system is setup the way it is, will likely be one of the more challenging part of your integration. But getting this right will go a long way to making your integration work well for your customers.
 
 ### `Person`
 
