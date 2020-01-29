@@ -5,7 +5,7 @@ about: Create a report to help us improve
 ---
 
 **Affected Product**
-Which product(s) does this bug affect?
+Which product does this bug affect?
 <!-- Pick one: Check-Ins, Giving, Groups, People, Services, Resources, Webhooks -->
 
 <!-- PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO. -->

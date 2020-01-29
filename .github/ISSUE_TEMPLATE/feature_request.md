@@ -5,7 +5,7 @@ about: Suggest an idea for our API
 ---
 
 **Related Product**
-Which application(s) is this feature related to?
+Which product is this feature related to?
 <!-- Pick one: Check-Ins, Giving, Groups, People, Services, Resources, Webhooks -->
 
 <!-- PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO. -->
