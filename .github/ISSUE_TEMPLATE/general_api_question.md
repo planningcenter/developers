@@ -11,7 +11,7 @@ Which product(s) is this question related to?
 <!-- PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO. -->
 
 **Describe the question**
-Replace this line with your question. Including information like the API endpoint you're trying to access will greatly improve our ability to give you a helpful answer.
+<!-- Replace this line with your question. Including information like the API endpoint you're trying to access will greatly improve our ability to give you a helpful answer. -->
 
 **What have you tried that worked?**
 
@@ -20,7 +20,7 @@ Replace this line with your question. Including information like the API endpoin
 
 
 **Additional context**
-Add any other context or screenshots about the feature request here.
+<!-- Add any other context or screenshots about the feature request here. -->
 
 
 ## I have..
