@@ -1,11 +1,12 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
+about: Suggest an idea for our API
 
 ---
 
-**Related Applications**
+**Related Product**
 Which application(s) is this feature related to?
+<!-- Pick one: Check-Ins, Giving, Groups, People, Services, Resources, Webhooks -->
 
 **Is your feature request related to a problem? Please describe.**
 A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]

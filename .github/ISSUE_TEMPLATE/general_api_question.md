@@ -4,9 +4,9 @@ about: Ask a question about using our API
 
 ---
 
-**Related Applications**
-Which application(s) is this question related to?
-<!-- Pick one: Check-Ins, Giving, People, Services, Resources, Webhooks -->
+**Related Product**
+Which product(s) is this question related to?
+<!-- Pick one: Check-Ins, Giving, Groups, People, Services, Resources, Webhooks -->
 
 <!-- PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO. -->
 

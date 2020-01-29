@@ -4,8 +4,9 @@ about: Create a report to help us improve
 
 ---
 
-**Affected Applications**
-Which app(s) does this bug affect?
+**Affected Product**
+Which product(s) does this bug affect?
+<!-- Pick one: Check-Ins, Giving, Groups, People, Services, Resources, Webhooks -->
 
 **Describe the bug**
 Provide a clear and concise description of the bug. If it is something that was previously working and suddenly broke your application, please let us know.
