@@ -1,5 +1,8 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Report a Security Vulnerability
+    url: mailto:security@planningcenter.com
+    about: Please responsibly report security vulnerabilities by sending an email to security@planningcenter.com.
   - name: Planning Center Support
-    url: https://support.planningcenteronline.com
+    url: https://support.planningcenter.com
     about: Not an API specific question? Get general Planning Center help from our support team.
