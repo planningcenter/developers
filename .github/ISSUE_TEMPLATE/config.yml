@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
   - name: Report a Security Vulnerability
-    url: mailto:hackerone@planningcenter.com
-    about: We run a bug bounty program through HackerOne. Please send an email to hackerone@planningcenter.com to request a program invite. Once approved you'll be able securely report the vulnerability. Thank you!
+    url: https://www.planningcenter.com/security
+    about: Please do not post security vulnerabilities here. To securely report a vulnerability, please follow the steps on our security page. Thank you!
   - name: Planning Center Support
     url: https://support.planningcenter.com
     about: Not an API specific question? Get general Planning Center help from our support team.
