@@ -1,6 +1,22 @@
-# Giving Donations Integration
+# Building A Giving Integration
 
-Because of the way that the Planning Center apps are structured in relation to each other and how Giving itself is built, there are a few concepts that are particularly helpful to know when building any sort of API integration that creates Donation records in Giving, especially on an ongoing basis.
+So you're looking to build a Giving integration? Great! This guide will give you all the info you need to get up and running. To start with, let's go over the two ways your integration can interact with Giving: the Giving API and Webhooks.
+
+## Giving API
+
+Our API (Application Programming Interface) gives you read and write access to all the essential models (`Donation`s, `Donor`s, `Fund`s, etc.) used in Giving. It allows you to automate tasks that would typically be performed via the web UI or export data from Giving into your own application. Be sure to check out Planning Center's full [API Documentation](https://developer.planning.center/docs/#/introduction).
+
+## Webhooks
+
+In addition to performing actions via the API, your integration may want to keep track of changes made to the Giving database. As of April 2021, Giving offers webhook events so that you can be immediately notified anytime a record is created, updated, or destroyed, and take some action in response. We'll go over webhooks in [more detail down below](#all-about-webhooks), and we also recommend taking a look at Planning Center's full [Webhooks Documentation](https://developer.planning.center/docs/#/apps/webhooks).
+
+## Which should I use?
+
+These tools are meant to be used in tandem by your integration. For example, you may want to offer a complete list of donations for a given Church/Organization. To do this, you would start with a full export of `Donation`s using the API, and then subscribe to `Donation` webhook events to keep in sync with any new donations made. In short, the API should be used to **perform actions** or **view historical data**. Webhooks should be used to **keep your data in sync** with Giving.
+
+# Getting to know Giving data models
+
+Because of the way that Planning Center products are structured in relation to each other and how Giving itself is built, there are a few concepts that are particularly helpful to know when building any sort of API integration that creates Donation records in Giving, especially on an ongoing basis.
 
 ## Donation Essentials
 
@@ -82,11 +98,11 @@ NOTE: In the case where you already have the `Person.id` (more on getting and sa
 
 #### Picking a `Person`
 
-We have a number of large organizations that use Planning Center, so there's a good chance that you'll come across a scenario where searching for a person based on first and last name will return multiple `Person` records. In this case, it's important that, unless you have a sophisticated way of further narrowing down and choosing among a list of 5 different "Peter Jones" records with a high degree of confidence, you give your user the ability to manually choose from the returned matches. We've found (in our own apps and in 3rd party integrations) that nearly any "simple" approach that lets a program make these decisions can easily result in problematic situations like one donor seeing another donor's contributions.
+We have a number of large organizations that use Planning Center, so there's a good chance that you'll come across a scenario where searching for a person based on first and last name will return multiple `Person` records. In this case, it's important that, unless you have a sophisticated way of further narrowing down and choosing among a list of 5 different "Peter Jones" records with a high degree of confidence, you give your user the ability to manually choose from the returned matches. We've found (in our own products and in 3rd party integrations) that nearly any "simple" approach that lets a program make these decisions can easily result in problematic situations like one donor seeing another donor's contributions.
 
-Within this process, it's also possible that a donor from your system won't exist yet in Planning Center. In that case, you'll need to create a new `Person` record, which can be done [via the API](https://developer.planning.center/docs/#/apps/people/2019-01-14/vertices/person#permissions), as well. 
+Within this process, it's also possible that a donor from your system won't exist yet in Planning Center. In that case, you'll need to create a new `Person` record, which can be done [via the API](https://developer.planning.center/docs/#/apps/people/2019-01-14/vertices/person#permissions), as well.
 
-Because these `Person` records appear in all of our Planning Center apps that these organizations use every day, it's also important to avoid "creating a new person" as the default when searching returns multiple matches. While that would be a safe option in some sense, the proliferation of new (and likely duplicate) profiles almost always creates a significant amount of extra work for each organization's administrator(s). While we give them means for sorting out those duplicates, it's much better to avoid the added burden altogether.
+Because these `Person` records appear in all of our Planning Center products that these organizations use every day, it's also important to avoid "creating a new person" as the default when searching returns multiple matches. While that would be a safe option in some sense, the proliferation of new (and likely duplicate) profiles almost always creates a significant amount of extra work for each organization's administrator(s). While we give them means for sorting out those duplicates, it's much better to avoid the added burden altogether.
 
 #### Tracking in your app
 
@@ -198,3 +214,40 @@ In this case, `Person` 14994497 (`person_to_remove`) was merged into 7504309 (`p
 
 If the gifts as received in your system don't have any donor data at all, it's also possible to omit the `Person` relationship from the `Donation` record, which will have the effect in Planning Center Giving of showing that `Donation`'s donor as "Anonymous Donor".
 
+# All about Webhooks
+
+As mentioned above, webhooks are the ideal way of keeping your data in sync with Giving. Instead of having to repeatedly reach out to Giving to check for any updates, webhooks notify you of changes as soon as they happen. The typical lifecycle of a webhook might look something like this:
+
+- Someone makes a new donation
+- Giving dispatches a webhook event containing a data payload for this donation
+- Your integration's app/server receives the webhook (at a URL you've specified), and takes some appropriate action (perhaps storing this new donation in your database)
+
+## Setting up Webhooks
+
+To start using webhooks, you'll want to head over to the [Webhooks Dashboard](https://api.planningcenteronline.com/webhooks#/). From there you can add a new Subscription URL and select which events to subscribe to. That's it! You can have one Subscription URL that handles many events, or use separate Subscription URLs for each event, it's entirely up to you.
+
+**Note:** Since webhooks are created under your specific user account, they only return data you have permission to see within Planning Center. For Giving, that means that only users with the role of **Admin** and **Bookkeeper** are able to fully utilize all webhooks.
+
+## Best Practices
+
+When building out your integration's webhook handlers, there are a few things you'll want to keep in mind.
+
+### Duplicate Events
+
+It's possible you'll receive the same webhook event more than once. This is especially true of `updated` events, but can happen for `created` and `destroyed` as well. We recommend making your event processing [idempotent](https://en.wikipedia.org/wiki/Idempotence) to ensure that you can handle duplicate events. For example, you could log the events you've processed and skip the processing of an already-logged event.
+
+### Event Order
+
+We can't guarantee that you'll receive webhook events in the order they occurred, and you'll want to account for this in your event processing. As an example, it's possible you could receive a `donation.created` event before the corresponding `profile.created` event for a first time donor. In these cases, we recommend using our API to fetch any missing data you need (ie. making a request to the `/people/:id` endpoint to get details on the person who just donated).
+
+### First Time Donor Webhooks
+
+Many integrations will want to take some action when someone gives their first donation, whether it's sending a thank you email or just recording the date a person became a donor.
+
+For these purposes, the `profile.created` webhook might feel like the obvious choice. However, it’s important to note that in Planning Center Giving, donor profiles can be created for all kinds of reasons – not just when someone donates. In fact, it’s very possible for people to have a donor profile with a completely empty donation history. This webhook just tells you that a profile was created.
+
+To find out when a person actually gave their first donation, you’ll want to use the `profile.first_donated` webhook. This webhook is sent out any time a donation is processed for a person with no existing donations. It’s worth noting that since Giving admins can reassign or delete donations, it’s possible you will receive this webhook more than once for the same person if their underlying donation history changes.
+
+# Conclusion
+
+We hope you found this guide helpful, and that it empowers you to make some amazing Giving integrations! If you run in to any trouble, feel free to open a [new issue](https://github.com/planningcenter/developers/issues/new/choose) in this repo.
