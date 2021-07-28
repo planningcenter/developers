@@ -22,7 +22,9 @@ Because of the way that Planning Center products are structured in relation to e
 
 ### `Donation`
 
-Most of the information you'll need about `Donation`s can be found in the [API docs](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/donation), and the general concept should be pretty clear.  This is the object that corresponds to a gift given to an organization at a particular point in time.  It ties the money given to the person who gave the money, how the money should be designated to one or more funds, and what means they used to give the gift (e.g. system originating the transaction, method of funding the transaction, etc.).
+This is the object that corresponds to a gift given to an organization at a particular point in time. It ties the money given to the person who gave the money, how the money should be designated to one or more funds, and what means they used to give the gift (e.g. system originating the transaction, method of funding the transaction, etc.).
+
+Learn more: [Donation](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/donation)
 
 ### `Fund`
 
@@ -34,13 +36,19 @@ If you need that default fund for your app, you can query for it based on the `d
 GET https://api.planningcenteronline.com/giving/v2/funds?where[default]=true
 ```
 
+Learn more: [Fund](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/fund)
+
 ### `Designation`
 
 Each `Donation` can have one or more `Designations`.  The main purpose of a designation is to say how much of a `Donation`'s money is going to a given `Fund`.  If all of a `Donation` is going to a single `Fund`, then you'll only need the one designation, but because a single `Donation` can be split between multiple funds, you'll always need to include details about a `Donation`'s `Designation`s when creating the `Donation` (more details in the [docs](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/donation#permissions)).
 
+Learn more: [Designation](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/designation)
+
 ### `PaymentSource`
 
 Every `Donation` must be associated with a `PaymentSource`. This tells Giving (and the Giving admins) what "system" originally accepted the `Donation`. You'll want to create a `PaymentSource` for your system and associate every `Donation` record with this `PaymentSource`. This Giving admins understand which donations in their Giving database were added by your system, via the API.
+
+Learn more: [PaymentSource](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/payment_source)
 
 ### `Batch`
 
@@ -60,6 +68,8 @@ With all of that in mind, you can use `Batch`es in one of two ways:
 In both cases, the end result is the same. The main difference in terms of _when_ the `Batch` is committed makes a difference in that route #2 does not provide you (or Giving admins) the opportunity to fix any mistakes before changes are logged and `Donation`s are made visible to donors.
 
 Whichever route you decide to take, it's helpful to make use of the `Batch`'s `description` to help differentiate these groupings from each other and from other `Batch`es that the Giving admins might be creating on their own.
+
+Learn more: [Batch](https://developer.planning.center/docs/#/apps/giving/2018-08-01/vertices/batch)
 
 ## Donors
 
