@@ -8,7 +8,7 @@ Our API (Application Programming Interface) gives you read and write access to a
 
 ## Webhooks
 
-In addition to performing actions via the API, your integration may want to keep track of changes made to the Giving database. As of April 2021, Giving offers webhook events so that you can be immediately notified anytime a record is created, updated, or destroyed, and take some action in response. We'll go over webhooks in [more detail down below](#all-about-webhooks), and we also recommend taking a look at Planning Center's full [Webhooks Documentation](https://developer.planning.center/docs/#/apps/webhooks).
+In addition to performing actions via the API, your integration may want to keep track of changes made to the Giving database. As of April 2021, Giving offers webhook events so that you can be immediately notified anytime a record is created, updated, or destroyed, and take some action in response. We'll go over webhooks in [more detail down below](#all-about-webhooks), and we also recommend taking a look at Planning Center's full [Webhooks Documentation](https://developer.planning.center/docs/#/overview/webhooks).
 
 ## Which should I use?
 
