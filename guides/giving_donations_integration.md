@@ -14,6 +14,12 @@ In addition to performing actions via the API, your integration may want to keep
 
 These tools are meant to be used in tandem by your integration. For example, you may want to offer a complete list of donations for a given Church/Organization. To do this, you would start with a full export of `Donation`s using the API, and then subscribe to `Donation` webhook events to keep in sync with any new donations made. In short, the API should be used to **perform actions** or **view historical data**. Webhooks should be used to **keep your data in sync** with Giving.
 
+## Responsible API Usage
+
+We offer a flexible API designed to empower you to build amazing tools for Giving, and in return, we expect this power to not be abused, specifically when working with very large datasets. You should be crafting your queries in such a way that the number of results returned by the API do not get into the range of tens of thousands. Paginating through this many results can be very resource intensive and potentially even degrade performance for other users.
+
+The easiest way to avoid this is by applying a date range filter to your queries, when applicable. You can read more about this in our general API documentation [here](https://developer.planning.center/docs/#/overview/dates-times).
+
 # Getting to know Giving data models
 
 Because of the way that Planning Center products are structured in relation to each other and how Giving itself is built, there are a few concepts that are particularly helpful to know when building any sort of API integration that creates Donation records in Giving, especially on an ongoing basis.
