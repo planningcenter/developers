@@ -1,0 +1,56 @@
+name: Issue Triage
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  label-product:
+    name: Auto-label product
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run product labeling
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Change this to use a different model (e.g., claude-sonnet-4-5-20250929)
+          LABELING_MODEL: "claude-haiku-4-5-20251001"
+        run: node .github/scripts/label-product.js
+
+  detect-duplicates:
+    name: Detect duplicate issues
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run duplicate detection
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Change this to use a different model (e.g., claude-opus-4-6-20250929)
+          DUPLICATE_DETECTION_MODEL: "claude-sonnet-4-5-20250929"
+        run: node .github/scripts/detect-duplicates.js
