@@ -18,6 +18,7 @@ const VALID_PRODUCT_LABELS = [
 ];
 
 const MODEL = process.env.LABELING_MODEL || "claude-haiku-4-5-20251001";
+const DRY_RUN = process.env.DRY_RUN === "true";
 
 async function identifyProduct(client, issueTitle, issueBody) {
   const response = await client.messages.create({
@@ -101,6 +102,11 @@ async function run() {
   }
 
   core.info(`Applying labels: ${labelsToApply.join(", ")}`);
+
+  if (DRY_RUN) {
+    core.info(`[DRY RUN] Would apply labels: ${labelsToApply.join(", ")}`);
+    return;
+  }
 
   await octokit.rest.issues.addLabels({
     owner,
