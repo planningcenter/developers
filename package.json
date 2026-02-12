@@ -1,0 +1,10 @@
+{
+  "private": true,
+  "name": "pco-developer-support-triage",
+  "description": "AI-powered issue triage for Planning Center developer support",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.0"
+  }
+}
