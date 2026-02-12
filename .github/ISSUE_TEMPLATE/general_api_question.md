@@ -6,7 +6,7 @@ about: Ask a question about using our API
 
 **Related Product**
 Which product is this question related to?
-<!-- Pick one: Check-Ins, Giving, Groups, People, Services, Resources, Webhooks -->
+<!-- Pick one: API, Calendar, Check-Ins, Giving, Groups, Home, People, Publishing, Registrations, Resources, Services, Webhooks -->
 
 <!-- PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO. -->
 
