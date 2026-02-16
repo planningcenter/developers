@@ -12,7 +12,6 @@ const VALID_PRODUCT_LABELS = [
   "People",
   "Publishing",
   "Registrations",
-  "Resources",
   "Services",
   "Webhooks",
 ];
