@@ -6,7 +6,7 @@ about: Create a report to help us improve
 
 **Affected Product**
 Which product does this bug affect?
-<!-- Pick one: Check-Ins, Giving, Groups, People, Services, Resources, Webhooks -->
+<!-- Pick one: API, Calendar, Check-Ins, Giving, Groups, Home, People, Publishing, Registrations, Services, Webhooks -->
 
 <!-- PLEASE DO NOT INCLUDE YOUR CLIENT ID, APPLICATION ID, OR SECRET IN THIS ISSUE. WE WILL REVOKE YOUR TOKEN IF YOU DO. -->
 
