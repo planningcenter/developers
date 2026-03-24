@@ -1,6 +1,6 @@
 # PCO API Developer Support
 
-Planning Center has an API that allows you to access most of the information in your account, across multiple apps. Documentation on the available API endpoints is [available here](https://developer.planning.center/docs/).
+Planning Center has an API that allows you to access most of the information in your account, across multiple apps. Documentation on the available API endpoints is [available here](https://api.planningcenteronline.com/docs/apps).
 
 ## Authentication
 
@@ -20,7 +20,7 @@ If you are building an application that will need to log in on behalf of other P
 
 You can register your application and get your Client ID and Secret [here](https://api.planningcenteronline.com/oauth/applications).
 
-We have a [Ruby example for authenticating with OAuth 2](https://github.com/planningcenter/pco_api_oauth_example).
+We have a [Ruby example for authenticating with OAuth 2](https://github.com/planningcenter/pco_api_oauth_example_sinatra_ruby).
 
 ## Working with the API
 
@@ -30,4 +30,4 @@ If you're creating a Ruby application we have the [pco_api gem](https://github.c
 
 ## Support
 
-If you have any questions or feature requests, post an [issue](https://github.com/ministrycentered/developers/issues). We'll take a look and get back to you asap.
+If you have any questions or feature requests, post an [issue](https://github.com/planningcenter/developers/issues). We'll take a look and get back to you asap.
