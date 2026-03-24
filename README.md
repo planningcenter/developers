@@ -8,10 +8,10 @@ Planning Center has an API that allows you to access most of the information in 
 
 If your app only needs access to your own data, this is the easiest method for authentication. This is typically how apps that sync data to your ChMS work.
 
-You can get 'Personal Access Tokens' [here](https://api.planningcenteronline.com/oauth/applications).  You can then use HTTP basic auth to access the API.
+You can get 'Personal Access Tokens' [here](https://api.planningcenteronline.com/personal_access_tokens). You can then use HTTP basic auth to access the API.
 
 ```bash
-curl -u application_id:secret https://api.planningcenteronline.com/services/v2/
+curl -u client_id:secret https://api.planningcenteronline.com/services/v2/
 ```
 
 ### Multi User Authentication
