@@ -5,9 +5,9 @@ on:
     types: [opened]
 
 env:
-  NPM_CONFIG_REGISTRY: ${{ secrets.NPM_CONFIG_REGISTRY }}
-  YARN_NPM_REGISTRY_SERVER: ${{ secrets.YARN_NPM_REGISTRY_SERVER }}
-  BUN_CONFIG_REGISTRY: ${{ secrets.BUN_CONFIG_REGISTRY }}
+  NPM_CONFIG_REGISTRY: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
+  YARN_NPM_REGISTRY_SERVER: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
+  BUN_CONFIG_REGISTRY: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
 
 jobs:
   label-product:
@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          registry-url: ${{ secrets.NPM_CONFIG_REGISTRY }}
+          registry-url: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
 
       - name: Install dependencies
         run: npm ci
@@ -51,7 +51,7 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-          registry-url: ${{ secrets.NPM_CONFIG_REGISTRY }}
+          registry-url: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
 
       - name: Install dependencies
         run: npm ci
