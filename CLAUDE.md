@@ -21,7 +21,9 @@ guides/             Integration guides for external developers
 
 ## Essential Commands
 
-- `npm ci` - Install dependencies
+This project uses [Yarn v4](https://yarnpkg.com/) (managed via Corepack).
+
+- `yarn install` - Install dependencies
 - `node .github/scripts/detect-duplicates.js` - Run duplicate detection locally
 - `node .github/scripts/label-product.js` - Run product labeling locally
 
