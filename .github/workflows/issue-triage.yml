@@ -4,11 +4,6 @@ on:
   issues:
     types: [opened]
 
-env:
-  NPM_CONFIG_REGISTRY: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
-  YARN_NPM_REGISTRY_SERVER: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
-  BUN_CONFIG_REGISTRY: ${{ secrets.NPM_QUARANTINE_REGISTRY }}
-
 jobs:
   label-product:
     name: Auto-label product
